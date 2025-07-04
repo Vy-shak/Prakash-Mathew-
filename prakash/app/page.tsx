@@ -1,20 +1,23 @@
+"use client"
 import Image from "next/image";
 import Navbar from "./components/Navbar";
+import { motion } from "motion/react"
+import { Herosec,Startkid } from "./sections/export";
 
-
-export default function Home() {
+function Home() {
   return (
-    <section className="w-screen bg-neutral-800 flex justify-start items-center">
+    <section className="w-screen flex-col bg-neutral-800 flex justify-start items-center">
       <Navbar />
-      <div className="w-full h-screen rounded-xl overflow-hidden grid place-items-center">
-        <video
-          className="w-full h-full object-cover"
-          src="/Herocut.mp4"
-          muted
-          loop
-          autoPlay
-        />
-      </div>
+      <section className="w-full">
+              <Herosec />
+      </section>
+      <section className="w-full">
+              <Startkid />
+      </section>
     </section>
+
   );
 }
+
+
+export default Home
