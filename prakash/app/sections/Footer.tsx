@@ -20,7 +20,7 @@ function FooterSec() {
             <div className='flex justify-center flex-col w-full items-center'>
                 <Image className='w-60 sm:w-72 md:w-81 object-cover' alt='footer' src={Footer} />
                 <span className='text-xl'>DISCLAIMER</span>
-                <p className='text-neutral-200 text-xs nirmala-ui  text-md text-center'>This website is inspired by and developed based on the creative work of the YouTube channel “SixEight.”All images used in this project are credited to their original creators, and I do not claim ownership over them. This was created as a personal hobby project, purely for educational and creative exploration.</p>
+                <p className='text-neutral-200 text-xs max-w-lg nirmala-ui  text-md text-center'>This website is inspired by and developed based on the creative work of the YouTube channel “SixEight.”All images used in this project are credited to their original creators, and I do not claim ownership over them. This was created as a personal hobby project, purely for educational and creative exploration.</p>
             </div>
             <div className='flex flex-col justify-start items-start gap-y-2'>
                 <span>Designed & developed by</span>

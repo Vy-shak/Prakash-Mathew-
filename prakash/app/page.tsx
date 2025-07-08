@@ -12,7 +12,7 @@ function Home() {
               <Herosec />
               <Startkid />
               <About />
-              <Achivements />
+              {/* <Achivements />  */}
               <Story />
               <FooterSec />
       </section>
