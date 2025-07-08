@@ -15,8 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={karantina.className}>
-      <body>{children}</body>
+    <html  lang="en" className={karantina.className}>
+      <body className='bg-neutral-950' >{children}</body>
     </html>
   )
 }

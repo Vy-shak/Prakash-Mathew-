@@ -19,6 +19,17 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 8px; /* you can change the width */
+}
+
+/* Style for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 4px;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);

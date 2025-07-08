@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {SquareArrowOutUpLeft }  from "lucide-react"
 import { Burgermenu } from '@/public/export'
 import Image from 'next/image'
-import {motion} from "motion/react"
+import {easeInOut, motion} from "motion/react"
 
 
 const elements = [
@@ -15,13 +15,13 @@ function Navbar() {
       <span className='text-white text-3xl'>PRAKASH MATHEW</span>
       <div  className='w-fit sm:flex hidden gap-x-8 cursor-pointer h-fit'>
         {elements.map((item,index)=>(
-            <div key={index} className='w-fit cursor-pointer h-fit flex gap-x-1 justify-center items-center'>
+            <motion.div whileHover={{ rotate:3 }} key={index} className='w-fit cursor-pointer h-fit flex gap-x-1 justify-center items-center'>
                 <SquareArrowOutUpLeft   className='text-white text-lg transition-transform duration-200 ease-in-out' />
-                <motion.span  whileHover={{ scale: 2 }} className='text-white text-xl shrink-0 hover:scale-150'>{item}</motion.span>
-            </div>
+                <motion.span   className='text-white text-xl shrink-0 '>{item}</motion.span>
+            </motion.div>
         ))}
       </div>
-      <Image className='flex sm:hidden' alt='burgermenu' src={Burgermenu} />
+      <Image className='flex w-6 sm:hidden' alt='burgermenu' src={Burgermenu} />
     </div>
   )
 }

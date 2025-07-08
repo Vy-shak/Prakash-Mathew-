@@ -1,18 +1,20 @@
 "use client"
 import Image from "next/image";
 import Navbar from "./components/Navbar";
-import { motion } from "motion/react"
-import { Herosec,Startkid } from "./sections/export";
+import { Herosec,Startkid,About,Story,FooterSec } from "./sections/export";
+import Achivements from "./sections/Achivements";
 
 function Home() {
   return (
-    <section className="w-screen flex-col bg-neutral-800 flex justify-start items-center">
+    <section className="w-full flex-col overflow-x-clip overflow-y-scroll bg-neutral-900 flex justify-start items-center">
       <Navbar />
-      <section className="w-full">
+      <section className="w-full flex justify-center items-center flex-col">
               <Herosec />
-      </section>
-      <section className="w-full">
               <Startkid />
+              <About />
+              <Achivements />
+              <Story />
+              <FooterSec />
       </section>
     </section>
 

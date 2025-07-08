@@ -1,25 +1,22 @@
 import React from 'react'
-import { HeroImage } from '@/public/export'
+import { motion } from 'motion/react'
+import { Fame1, Fame2, Fame3 } from '@/public/export'
 import Image from 'next/image'
-import { useRef } from 'react'
-import { useScroll,motion,useTransform  } from 'motion/react'
+import Dots from '../components/Dots'
 
 function Startkid() {
-    const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"], // When the element enters/exits the viewport
-  });
-
-  // Map scroll progress [0 → 1] to movement [0 → -600px]
-  const y = useTransform(scrollYProgress, [0, 1], [0,-1000]);
   return (
     <motion.div
-          ref={ref}
-      style={{ y}}
-  className="w-screen h-screen sm:px-20 px-4">
-      <Image className='w-screen h-screen rounded-xl object-cover z-20' alt='heroimage' src={HeroImage} />
+      className="w-full flex-col h-full pt-6 flex justify-center items-center z-50">
+      <span className='text-6xl md:text-7xl lg:text-8xl'>STAR BOY</span>
+      <div className='w-full flex-col gap-y-4 flex justify-center items-center'>
+        <div className='w-fit flex pt-3 justify-center items-center'>
+          <Image className='sm:w-40 xl:w-72 md:w-44  relative shrink-0 -right-4 lg:w-60 w-28' alt='fame1' src={Fame1} />
+          <Image className='sm:w-40 xl:w-72 md:w-44  shrink-0 z-30 lg:w-60  w-28' alt='fame1' src={Fame2} />
+          <Image className='sm:w-40 xl:w-72 md:w-44 shrink-0 relative lg:w-60 -left-4 w-28' alt='fame1' src={Fame3} />
+        </div>
+        <Dots />
+      </div>
     </motion.div>
   )
 }

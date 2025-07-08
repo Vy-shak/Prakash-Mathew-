@@ -1,5 +1,23 @@
 import Burgermenu from "./ICONS/Burgermenu.svg"
 import HeroImage from "./images/HEROImages.png"
+import Fame1 from "./images/Fame1.png"
+import Fame2 from "./images/Fame2.png"
+import Fame3 from "./images/Fame3.png"
+import About1 from "./images/About1.png"
+import About2 from "./images/About2.png"
+import Testimonials1 from "./images/Testimoni1.png"
+import Testimonials2 from "./images/Testimoni2.png"
+import Testimonials3 from "./images/Testimoni3.png"
+import Testimonials4 from "./images/Testimoni4.png"
+import Testimonials5  from "./images/Testimoni5.png"
+import Testimonials6  from "./images/Testimoni6.png"
+import Testimonials7  from "./images/Testimoni7.png"
+import Disk from "./images/Disk.png"
+import Music from "./images/Music.png"  
+import Breakup from "./images/Breakup.png"
+import Footer from "./images/Footer.png"
+import Youtube from "./images/Youtube.png"
+import Instagram from "./images/Instagram.png"
 
 
-export {Burgermenu,HeroImage}
+export {Burgermenu,HeroImage,Fame1,Fame2,Fame3,About1,About2, Youtube,Instagram, Footer, Disk,Music,Breakup, Testimonials7,Testimonials1,Testimonials2,Testimonials3,Testimonials4,Testimonials5,Testimonials6}
