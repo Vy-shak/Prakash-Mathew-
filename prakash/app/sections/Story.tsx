@@ -18,9 +18,9 @@ function Story() {
                     <Image className='w-10' alt='image' src={Disk} />
                     <span className='text-2xl '>She left.Purpose didn't</span>
                 </div>
-                <p className='font-normal mt-3 text-center'>It was the final year of college. Sona’s laughter still echoed in the corridors. We shared songs, secrets, and… maybe something deeper. But life had other plans. Our dreams diverged, and so did we. It was the final year of college. Sona’s laughter still echoed in the corridors. We shared songs, secrets, and… maybe something deeper. But life had other plans. Our dreams diverged, and so did we.</p>
+                <p className='font-normal mt-3 nirmala-ui text-center'>It was the final year of college. Sona’s laughter still echoed in the corridors. We shared songs, secrets, and… maybe something deeper. But life had other plans. Our dreams diverged, and so did we. It was the final year of college. Sona’s laughter still echoed in the corridors. We shared songs, secrets, and… maybe something deeper. But life had other plans. Our dreams diverged, and so did we.</p>
             </div>
-            <button className='mt-4 px-4 py-2 bg-red-700 text-white rounded'>Read More</button>
+            <button className='mt-4 px-4 py-2 bg-red-700 text-white rounded nirmala-ui'>Read More</button>
         </section>
     )
 }

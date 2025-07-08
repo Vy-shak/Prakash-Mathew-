@@ -16,8 +16,8 @@ function Navbar() {
       <div  className='w-fit sm:flex hidden gap-x-8 cursor-pointer h-fit'>
         {elements.map((item,index)=>(
             <motion.div whileHover={{ rotate:3 }} key={index} className='w-fit cursor-pointer h-fit flex gap-x-1 justify-center items-center'>
-                <SquareArrowOutUpLeft   className='text-white text-lg transition-transform duration-200 ease-in-out' />
-                <motion.span   className='text-white text-xl shrink-0 '>{item}</motion.span>
+                <SquareArrowOutUpLeft   className='text-white hover:text-red-500 text-lg transition-transform duration-200 ease-in-out' />
+                <motion.span   className='text-white hover:text-red-500 text-xl shrink-0 '>{item}</motion.span>
             </motion.div>
         ))}
       </div>

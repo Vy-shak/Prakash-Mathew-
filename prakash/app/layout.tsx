@@ -1,11 +1,10 @@
-// app/layout.tsx
 import './globals.css'
 import { Karantina } from 'next/font/google'
 
 const karantina = Karantina({
   subsets: ['latin'],
-  weight: ['300', '400', '700'], // Use the weights you need
-  variable: '--font-karantina',  // Optional: for CSS variable usage
+  weight: ['300', '400', '700'],
+  variable: '--font-karantina',
 })
 
 export const metadata = {
@@ -15,8 +14,9 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html  lang="en" className={karantina.className}>
-      <body className='bg-neutral-950' >{children}</body>
+    <html lang="en" className={karantina.variable}>
+      <body className="bg-neutral-950 font-karantina">{children}</body>
     </html>
   )
 }
+
