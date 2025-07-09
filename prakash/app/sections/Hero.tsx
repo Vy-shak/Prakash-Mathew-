@@ -1,45 +1,76 @@
-"use client"
-import React from 'react'
-import { motion } from 'motion/react'
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 function Hero() {
-  return (
-    <div className="w-full h-screen rounded-xl overflow-hidden grid place-items-center ">
-        {/* Video as background layer */}
-        <motion.div className="w-full h-full col-start-1 row-start-1">
-          <video
-            className="w-full h-full object-cover "
-            src="/Herocut.mp4"
-            muted
-            loop
-            autoPlay
-          />
-        </motion.div>
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-        {/* Text on top of the video */}
-        <motion.div initial={{ opacity: 0 }}
-          animate={{
-            opacity: [0, 1, 0.6, 1, 0.2, 1, 0.5, 1, 0.3, 1],// more flickers
-          }}
-          transition={{
-            delay: 3,
-            duration: 1,
-            ease: "easeInOut",
-            times: [0, 0.1, 0.2, 0.35, 0.45, 0.6, 0.7, 0.8, 1],
-            
-          }}
-          onAnimationStart={()=>{
-            document.body.style.overflow="hidden"
-          }}
-                    onAnimationComplete={()=>{
-            document.body.style.overflow="auto"
-          }} className="w-fit text-center h-fit col-start-1 row-start-1 z-10">
-          <span className="text-white text-8xl  sm:text-9xl font-bold ">
-            PRAKSH MATHEW
-          </span>
-        </motion.div>
-      </div>
-  )
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleCanPlayThrough = () => {
+      setVideoLoaded(true);
+    };
+
+    video.addEventListener("canplaythrough", handleCanPlayThrough);
+
+    return () => {
+      video.removeEventListener("canplaythrough", handleCanPlayThrough);
+    };
+  }, []);
+
+  return (
+    <div className="w-full h-screen">
+      {!videoLoaded ? (
+        <div className="w-full h-full flex items-center justify-center bg-black text-white text-2xl">
+          Loading...
+        </div>
+      ) : (
+        <div className="w-full h-full rounded-xl overflow-hidden grid place-items-center">
+          {/* Background video */}
+          <div className="w-full h-full col-start-1 row-start-1">
+            <video
+              ref={videoRef}
+              className="w-full h-full object-cover"
+              src="/Herocut.mp4"
+              muted
+              loop
+              autoPlay
+              playsInline
+              preload="auto"
+            />
+          </div>
+
+          {/* Animated Text */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: [0, 1, 0.6, 1, 0.2, 1, 0.5, 1, 0.3, 1],
+            }}
+            transition={{
+              delay: 3,
+              duration: 1,
+              ease: "easeInOut",
+              times: [0, 0.1, 0.2, 0.35, 0.45, 0.6, 0.7, 0.8, 1],
+            }}
+            onAnimationStart={() => {
+              document.body.style.overflow = "hidden";
+            }}
+            onAnimationComplete={() => {
+              document.body.style.overflow = "auto";
+            }}
+            className="w-fit text-center h-fit col-start-1 row-start-1 z-10"
+          >
+            <span className="text-white text-8xl sm:text-9xl font-bold">
+              PRAKSH MATHEW
+            </span>
+          </motion.div>
+        </div>
+      )}
+    </div>
+  );
 }
 
-export default Hero
+export default Hero;
