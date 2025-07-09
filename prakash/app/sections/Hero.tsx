@@ -1,10 +1,8 @@
 "use client"
 import React from 'react'
-import { useRef } from 'react'
-import { useScroll,motion,useTransform  } from 'motion/react'
+import { motion } from 'motion/react'
 
 function Hero() {
-  const { scrollYProgress } = useScroll()
   return (
     <div className="w-full h-screen rounded-xl overflow-hidden grid place-items-center ">
         {/* Video as background layer */}
@@ -36,7 +34,7 @@ function Hero() {
                     onAnimationComplete={()=>{
             document.body.style.overflow="auto"
           }} className="w-fit text-center h-fit col-start-1 row-start-1 z-10">
-          <span className="text-white  text-9xl font-bold ">
+          <span className="text-white text-8xl  sm:text-9xl font-bold ">
             PRAKSH MATHEW
           </span>
         </motion.div>

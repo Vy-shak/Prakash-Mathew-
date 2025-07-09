@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={karantina.variable}>
+    <html style={{scrollBehavior: 'smooth'}} lang="en" className={karantina.variable}>
       <body className="bg-neutral-950 font-karantina">{children}</body>
     </html>
   )

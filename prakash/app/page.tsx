@@ -1,8 +1,6 @@
 "use client"
-import Image from "next/image";
 import Navbar from "./components/Navbar";
 import { Herosec,Startkid,About,Story,FooterSec } from "./sections/export";
-import Achivements from "./sections/Achivements";
 
 function Home() {
   return (

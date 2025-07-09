@@ -1,5 +1,5 @@
 import React from 'react'
-import { About1, About2 } from '@/public/export'
+import { About1} from '@/public/export'
 import Image from 'next/image'
 import Testimonials from '../components/Testimonials'
 import { motion } from 'motion/react'
@@ -20,7 +20,7 @@ function About() {
                 transition={{ duration: 2, delay: 0.2 }} className='hover:text-red-600'> sensation</motion.span></motion.span>
                     <motion.p initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: [10, 0] }}
-                        transition={{ duration: 0.5, delay: 0.5 }} className='font-light text-sm max-w-md sm:text-start text-center nirmala-ui'>From local vibes to global recognition, Prakash Mathew is not just a name — he's a movement. Bursting onto the scene with viral reels and an unforgettable presence, he's captured the attention of millions across Instagram, TikTok, and YouTube. What began as a trend has evolved into a cultural phenomenon, uniting fans through humor, music, and pure originality.</motion.p>
+                        transition={{ duration: 0.5, delay: 0.5 }} className='font-light text-sm max-w-md sm:text-start text-center nirmala-ui'>{"From local vibes to global recognition, Prakash Mathew is not just a name — he's a movement. Bursting onto the scene with viral reels and an unforgettable presence, he's captured the attention of millions across Instagram, TikTok, and YouTube. What began as a trend has evolved into a cultural phenomenon, uniting fans through humor, music, and pure originality."}</motion.p>
                 </div>
             </div>
             <Testimonials />

@@ -7,9 +7,6 @@ import Marquee from 'react-fast-marquee'
 const testimoni1 = [
     Testimonials1, Testimonials2, Testimonials3,Testimonials4, Testimonials5, Testimonials6, Testimonials7
 ]
-const testimoni2 = [
-    Testimonials4, Testimonials5, Testimonials6
-]
 
 function Testimonials() {
     return (
