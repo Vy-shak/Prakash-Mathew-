@@ -5,6 +5,8 @@ import { Breakup } from '@/public/export'
 import { Disk } from '@/public/export'
 import { useState } from 'react'
 import {motion} from 'motion/react'
+import {ChevronDown,ChevronUp } from "lucide-react"
+import { div } from 'motion/react-m'
 
 function Story() {
     const [showMore, setShowMore] = useState(false)
@@ -26,9 +28,14 @@ function Story() {
                 <p className='font-normal max-w-lg text-sm text-neutral-200 mt-3 nirmala-ui text-center'>Life doesn’t come with warnings. One moment you're steady, the next you're shattered. A breakup feels like the world collapsing — but it also gives you a choice. It can destroy you, or it can become the fuel that builds a stronger version of yourself. I chose the second.</p>
                 {showMore&&<motion.p initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1,delay:0.5}} className='font-normal max-w-lg text-sm text-neutral-200 mt-3 nirmala-ui text-center'>I still remember standing on those college stages, mic in hand, voice trembling, but heart full. Back then, the spotlight was small, the audience smaller — but the dream was loud. Every late-night rehearsal, every moment I thought I wasn’t enough, built me for something bigger. Step by step, stage by stage, what once felt distant became real. And somehow, singing to a crowd that didn’t know my name felt just as sacred as when the whole world started listening.</motion.p>}
                 {showMore&&<motion.p initial={{opacity:0}} animate={{opacity:1}} transition={{duration:2,delay:1}} className='font-normal max-w-lg text-sm text-neutral-200 mt-3 nirmala-ui text-center'>It’s strange how growth hides in the quietest places — in the nights you cry alone, in the mornings you still get up, in the small wins no one sees. Even when I tripped over the tiniest things, I learned. I healed. I got better. Because sometimes it’s not the grand gestures, but the quiet persistence that changes your life.</motion.p>}
-
                     </div>
-            <button onClick={() => setShowMore(!showMore)} className='mt-4 px-4 cursor-pointer hover:bg-red-800 font-medium text-xs py-2 bg-red-700 text-white rounded-lg nirmala-ui'>{showMore ? 'Close' : 'Read More'}</button>
+            <button onClick={() => setShowMore(!showMore)} className='mt-4 px-4 cursor-pointer hover:bg-red-800 font-medium text-xs py-2 bg-red-700 text-white rounded-lg nirmala-ui'>{showMore?<div className='w-fit flex justify-center items-center'>
+                <ChevronDown/>
+                 <span>Show</span>
+            </div>:<div className='w-fit flex justify-center items-center'>
+                <ChevronUp />
+                 <span>Close</span>
+            </div>}</button>
         </section>
     )
 }
