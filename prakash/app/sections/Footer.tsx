@@ -16,7 +16,7 @@ function FooterSec() {
                     </Link>
                 </div>
                 <div className='flex justify-start items-center gap-x-2'>
-                    <Image className='w-6' alt='instagram' src={Instagram} />
+                    <Image className='w-4' alt='instagram' src={Instagram} />
                     <Link href={"https://www.instagram.com/sixeight_official"} className='w-fit px-6 bg-white flex justify-center items-center rounded-full h-6'>
                         <span className='text-neutral-800 text-sm'>sixeight_official</span>
                     </Link>
