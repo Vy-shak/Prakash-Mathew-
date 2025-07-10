@@ -27,7 +27,7 @@ function FooterSec() {
                 <span className='text-xl'>DISCLAIMER</span>
                 <p className='text-neutral-200 text-xs max-w-lg nirmala-ui  text-md text-center'>This website is inspired by and developed based on the creative work of SixEight. All images used in this project are credited to their original creators, and I do not claim ownership over them. This was created as a personal hobby project, purely for educational and creative exploration.</p>
             </div>
-            <div className='flex flex-col justify-center items-center sm:justify-start sm:items-start  gap-y-2'>
+            <div className='flex flex-col justify-center items-center  gap-y-2'>
                 <span className='whitespace-nowrap'>Designed & developed by</span>
                                     <Link href={"https://yshak.vercel.app/"} className='w-fit px-6 bg-white flex justify-center items-center rounded-full h-6'>
                         <span className='text-neutral-800 text-sm'>yshak</span>
