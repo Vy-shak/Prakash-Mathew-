@@ -30,11 +30,11 @@ function Story() {
                 {showMore&&<motion.p initial={{opacity:0}} animate={{opacity:1}} transition={{duration:2,delay:1}} className='font-normal max-w-lg text-sm text-neutral-200 mt-3 nirmala-ui text-center'>{"It’s strange how growth hides in the quietest places — in the nights you cry alone, in the mornings you still get up, in the small wins no one sees. Even when I tripped over the tiniest things, I learned. I healed. I got better. Because sometimes it’s not the grand gestures, but the quiet persistence that changes your life."}  </motion.p>}
                     </div>
             <button onClick={() => setShowMore(!showMore)} className='mt-4 px-4 cursor-pointer hover:bg-red-800 font-medium text-xs py-2 bg-red-700 text-white rounded-lg nirmala-ui'>{showMore?<div className='w-fit flex justify-center items-center'>
-                <ChevronDown/>
+                <ChevronDown className='text-xs gap-x-1 font-medium' size={18}/>
                  <span>Show</span>
-            </div>:<div className='w-fit flex justify-center items-center'>
-                <ChevronUp />
-                 <span>Close</span>
+            </div>:<div className='w-fit gap-x-1 flex justify-center items-center'>
+                <ChevronUp size={18} />
+                 <span className='text-xs font-medium'>Close</span>
             </div>}</button>
         </section>
     )

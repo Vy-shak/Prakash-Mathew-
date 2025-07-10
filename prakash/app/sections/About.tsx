@@ -15,7 +15,7 @@ function About() {
                 <div className='w-full flex flex-col justify-center sm:justify-start sm:items-start items-center'>
                     <motion.span initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: [10, 0] }}
-                        transition={{ duration: 0.5, delay: 0.3 }} className='text-3xl sm:text-3xl md:text-4xl lg:text-5xl '><span>Global</span><motion.span initial={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.5, delay: 0.3 }} className='text-3xl mt-2 sm:text-3xl md:text-4xl lg:text-5xl '><span>Global</span><motion.span initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: [10, 0] }}
                 transition={{ duration: 2, delay: 0.2 }} className='hover:text-red-600'> sensation</motion.span></motion.span>
                     <motion.p initial={{ opacity: 0, y: -20 }}

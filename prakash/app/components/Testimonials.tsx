@@ -13,12 +13,12 @@ function Testimonials() {
         <div className='flex w-full mt-8 gap-y-4 justify-center items-center sm:justify-start  sm:items-start flex-col'>
             <Marquee speed={5} direction='left' className='flex w-sm sm:justify-between justify-center items-center flex-col sm:flex-row  sm:items-start  h-fit '>
                 {testimoni1.map((item, index) => (
-                    <Image key={index} className='h-14 w-fit mr-1 shrink-0 object-contain' alt='testimonials' src={item} />
+                    <Image key={index} className='h-14 hover:shadow  shadow-red-600 w-fit mr-1 shrink-0 object-contain' alt='testimonials' src={item} />
                 ))}
             </Marquee>
-            <Marquee speed={5} direction='right' className='flex w-sm sm:justify-start justify-center items-center flex-col sm:flex-row  sm:items-start  h-fit '>
+            <Marquee speed={5} direction='right' className='flex  w-sm sm:justify-start justify-center items-center flex-col sm:flex-row  sm:items-start  h-fit '>
                 {testimoni1.map((item, index) => (
-                    <Image key={index} className='h-14 w-fit mr-1 shrink-0 object-contain' alt='testimonials' src={item} />
+                    <Image key={index} className='h-14 w-fit hover:shadow  transition duration-300 ease-initial shadow-red-600 mr-1 shrink-0 object-contain' alt='testimonials' src={item} />
                 ))}
             </Marquee>
         </div>

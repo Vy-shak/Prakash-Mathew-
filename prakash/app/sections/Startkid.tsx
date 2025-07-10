@@ -10,7 +10,7 @@ function Startkid() {
   const [count,setCount] = useState<number>(0)
   return (
     <motion.div
-      className="w-full flex-col h-full pt-6 flex justify-center items-center z-50">
+      className="w-full flex-col h-full pt-6 flex justify-center items-center z-30">
       <motion.span  initial={{ opacity: 0,y:-20 }} transition={ {duration: 2,delay:1}}   whileInView={{ opacity: 1,y:[10,0] } } className='text-6xl md:text-7xl lg:text-8xl'>STAR BOY</motion.span>
       <div className='w-full flex-col gap-y-4 flex justify-center items-center'>
         <div className='w-fit flex pt-3 justify-center items-center'>

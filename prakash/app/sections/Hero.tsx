@@ -3,36 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 function Hero() {
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleCanPlayThrough = () => {
-      setVideoLoaded(true);
-    };
-
-    video.addEventListener("canplaythrough", handleCanPlayThrough);
-
-    return () => {
-      video.removeEventListener("canplaythrough", handleCanPlayThrough);
-    };
-  }, []);
 
   return (
     <div className="w-full h-screen">
-      {!videoLoaded ? (
-        <div className="w-full h-full flex items-center justify-center bg-black text-white text-2xl">
-          Loading...
-        </div>
-      ) : (
+      
         <div className="w-full h-full rounded-xl overflow-hidden grid place-items-center">
           {/* Background video */}
           <div className="w-full h-full col-start-1 row-start-1">
             <video
-              ref={videoRef}
               className="w-full h-full object-cover"
               src="/Herocut.mp4"
               muted
@@ -68,7 +46,6 @@ function Hero() {
             </span>
           </motion.div>
         </div>
-      )}
     </div>
   );
 }

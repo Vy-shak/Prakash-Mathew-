@@ -20,7 +20,19 @@ function Navbar() {
   const [sideBar,setSidebar] = useState(false)
   return (
     <div className='w-screen h-16 px-6 z-50 fixed top-0 bg-neutral-900 flex justify-between items-center'>
-      <span className='text-white text-3xl'>PRAKASH MATHEW</span>
+      <motion.span 
+        className="text-white cursor-pointer text-3xl font-bold"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ 
+          duration: 0.8, 
+          ease: "easeOut",
+          type: "spring",
+          stiffness: 100
+        }}
+      >
+        PRAKASH MATHEW
+      </motion.span>
       <div  className='w-fit sm:flex hidden gap-x-8 cursor-pointer h-fit'>
         {elements.map((item,index)=>(
             <motion.div onClick={() => router.push(item.link) } whileHover={{ rotate:3 }} key={index} className='w-fit cursor-pointer h-fit flex gap-x-1 justify-center items-center'>
